@@ -1,0 +1,8 @@
+<mat-radio-group aria-label="Select an option">
+    <p>{{lengthActive}} item{{(lengthActive > 1) ? "s" : ""}} left</p>
+    <mat-radio-button (click)="currentFilter = 0;onChangeFilter();" value="0" checked>All</mat-radio-button>
+    <mat-radio-button (click)="currentFilter = 1;onChangeFilter();" value="1" >Active</mat-radio-button>
+    <mat-radio-button (click)="currentFilter = 2;onChangeFilter();" value="2" >Completed</mat-radio-button>
+    <button (click)="updateAll()">Select All</button>
+    <button (click)="deleteAllCompleted()" *ngIf="hasCompletedItem">Delete All Completed</button>
+</mat-radio-group>

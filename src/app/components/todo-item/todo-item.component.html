@@ -1,0 +1,11 @@
+<div class="item-container">
+    <mat-checkbox *ngIf="!changeToInput" [checked]="todo.isDone" (change)="changeTodoStatus()"></mat-checkbox>
+    <mat-card id='card' (dblclick)="changeTodoInput()">
+        <span *ngIf="!changeToInput">
+            <p *ngIf="!todo.isDone">{{ todo.title }}</p>
+            <s *ngIf="todo.isDone">{{ todo.title }}</s>
+        </span>
+        <input (mouseover)="focusInput($event)" (mouseleave)="onChangeClickOutside($event)"  *ngIf="changeToInput" type="text" [value]="todo.title" (keyup)="updateTodo($event)" autofocus>
+        <i class="fas fa-times" (click)="triggerDeleteItem()"></i>
+    </mat-card>
+</div>

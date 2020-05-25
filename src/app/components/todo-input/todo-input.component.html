@@ -1,0 +1,6 @@
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>New Task</mat-label>
+      <input name="first" matInput placeholder="what's need to be done" [(ngModel)] ="todoContent" (keyup)="onSubmit($event)">
+    </mat-form-field>
+</form>

@@ -1,0 +1,46 @@
+.item-container{
+    display:flex;
+    align-items:center;
+    margin:10px 0;
+}
+mat-card{
+    margin-left: 10px;
+    font-size: 50%;
+    width:80%;
+    display: block;
+    align-items: center;
+    padding: 0;
+    padding-left:16px;
+    height:50px;
+    border-radius: 10px;
+}
+
+input{
+    width:100%;
+    height: 100%;
+}
+
+p,s{
+    margin:0;
+}
+
+input{
+    float:left;
+}
+
+span{
+    float:left;
+    position: relative;
+    top: 15px;
+}
+
+i{
+    opacity: 0;
+    cursor: pointer;
+    float:right;
+    transition: all 0.3s ease-in-out;
+}
+
+mat-card:hover i{
+    opacity: 1;
+}
